@@ -27,7 +27,7 @@ def send_message(value):
 
 if __name__ == '__main__':
     print("Sending messages to Kafka...")
-    for i in range(10):
+    for i in range(1):
         message = {
             "id": i,
             "message": f"Hello Kafka {i}",

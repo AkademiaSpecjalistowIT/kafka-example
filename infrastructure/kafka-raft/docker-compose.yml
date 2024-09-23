@@ -4,3 +4,5 @@ services:
     container_name: kafka
     ports:
       - "9092:9092"
+    volumes:
+      - ./kafka/data:/var/lib/kafka/data
