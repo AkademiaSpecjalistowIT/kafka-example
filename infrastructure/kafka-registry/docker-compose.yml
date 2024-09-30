@@ -1,0 +1,17 @@
+version: '3.8'
+services:
+  kafka:
+    image: apache/kafka:3.8.0
+    container_name: kafka-simple
+    ports:
+      - "9092:9092"
+    volumes:
+      - /var/lib/kafka/data
+
+  schema-registry:
+    image: apicurio/apicurio-registry-mem:latest-snapshot
+    container_name: schema-registry
+    ports:
+      - "8081:8081"
+    depends_on:
+      - kafka
